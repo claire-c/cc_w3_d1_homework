@@ -7,9 +7,7 @@ DROP TABLE songs;
 
 CREATE TABLE songs (
   id SERIAL8 PRIMARY KEY,
--- The primary key forces the id to be unique every time.
   title VARCHAR(255),
-  -- In the brackets, this is the max number of characters in the string or VARCHAR.
   artist VARCHAR(255)
 );
 
@@ -18,7 +16,7 @@ CREATE TABLE rooms (
   name VARCHAR(255),
   till INT
 );
--- Create a new row on the table.
+
 CREATE TABLE bars (
   id SERIAL8 PRIMARY KEY,
   till INT,
@@ -139,40 +137,3 @@ SELECT * FROM guests
   WHERE name = 'Simon';
 SELECT * FROM songs
   WHERE title = 'Say My Name';
-
---
--- -- UPDATE characters SET darkside = true WHERE name = 'Anakin';
--- UPDATE characters
---   SET (name, darkside) = ('Darth Vadar', true)
---   WHERE name = 'Anakin';
---
--- UPDATE characters
---   SET age = 65
---   WHERE name = 'Obi-Wan';
--- -- Change Obi-Wan's age from 239 to 65
---
--- -- DELETE FROM characters
--- --   WHERE name = 'Darth Maul' AND age = 100;
--- -- DELETE FROM characters
--- --   WHERE age = 17;
--- -- DELETE FROM characters;
--- -- Will delete all characters
---
--- UPDATE characters SET darkside = true;
---
---
--- UPDATE characters
---   SET age = 26
---   WHERE id = 9;
---
---
--- SELECT * FROM characters;
--- -- -- * means all the columns
--- -- NULL in SQL is the equivalent to nil
---
--- -- SELECT name, age, darkside FROM characters ORDER BY name;
--- SELECT * FROM characters ORDER BY name;
--- -- There is no concept of order in SQL - the ORDER BY command will order the rows according to your instruction.
--- SELECT COUNT(*) FROM characters;
---
--- SELECT * FROM lightsabers;
