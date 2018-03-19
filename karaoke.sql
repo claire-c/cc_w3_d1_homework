@@ -114,11 +114,32 @@ UPDATE rooms_songs
 UPDATE bars
   SET till = 25 WHERE room_id = 1;
 
-  SELECT * FROM songs;
-  SELECT * FROM rooms;
-  SELECT * FROM rooms_songs;
-  SELECT * FROM guests;
-  SELECT * FROM bars;
+SELECT * FROM songs;
+SELECT * FROM rooms;
+SELECT * FROM rooms_songs;
+SELECT * FROM guests;
+SELECT * FROM bars;
+
+SELECT title FROM songs;
+SELECT name FROM rooms;
+SELECT name, wallet FROM guests;
+SELECT id FROM bars;
+SELECT room_id FROM rooms_songs;
+
+SELECT wallet, song_id FROM guests
+  WHERE name = 'Claire';
+SELECT name FROM rooms
+  WHERE id = 1;
+SELECT room_id FROM rooms_songs
+  WHERE song_id = 1;
+SELECT room_id FROM rooms_songs
+  WHERE room_id = 1;
+
+SELECT * FROM guests
+  WHERE name = 'Simon';
+SELECT * FROM songs
+  WHERE title = 'Say My Name';
+
 --
 -- -- UPDATE characters SET darkside = true WHERE name = 'Anakin';
 -- UPDATE characters
