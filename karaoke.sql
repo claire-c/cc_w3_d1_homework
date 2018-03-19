@@ -1,11 +1,10 @@
--- DROP TABLE lightsabers;
--- We have to delete lightsabers first, because if we delete characters first then there is an error, because lightsabers is reliant on characters.
--- DROP TABLE characters;
+DROP TABLE guests;
+DROP TABLE rooms_songs;
+DROP TABLE bars;
+DROP TABLE rooms;
+DROP TABLE songs;
 
--- We do this so that every time the file runs the table below is empty and fresh.
 
--- Define our table structure.
--- We have to create our characters first and then lightsabers, because the lightsabers are reliant on characters.
 CREATE TABLE songs (
   id SERIAL8 PRIMARY KEY,
 -- The primary key forces the id to be unique every time.
@@ -102,7 +101,24 @@ SELECT * FROM songs;
 SELECT * FROM rooms;
 SELECT * FROM rooms_songs;
 SELECT * FROM guests;
+SELECT * FROM bars;
 
+UPDATE guests
+  SET wallet = 30 WHERE id = 2;
+UPDATE guests
+  SET name = 'Karaoke Killer' WHERE name = 'Ewa';
+UPDATE songs
+  SET title = 'Say My Name' WHERE id = 3;
+UPDATE rooms_songs
+  SET song_id = 2 WHERE id = 9;
+UPDATE bars
+  SET till = 25 WHERE room_id = 1;
+
+  SELECT * FROM songs;
+  SELECT * FROM rooms;
+  SELECT * FROM rooms_songs;
+  SELECT * FROM guests;
+  SELECT * FROM bars;
 --
 -- -- UPDATE characters SET darkside = true WHERE name = 'Anakin';
 -- UPDATE characters

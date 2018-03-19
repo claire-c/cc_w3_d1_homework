@@ -10,7 +10,7 @@
 <!-- - Recreate your Karaoke classes as tables
 - Connect Tables to each other with one to many and many to many joins -->
 <!-- - Enter some example data into your tables -->
-- Change some data in your tables
+<!-- - Change some data in your tables -->
 - Print only selected columns from your tables
 - Print only selected rows from your tables (eg. only Country&Western songs)
 
